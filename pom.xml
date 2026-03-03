@@ -58,8 +58,7 @@
             <version>2.8.14</version>
         </dependency>
         <dependency>
-            <!-- Outils de développement Spring Boot, cf:
-            https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html -->
+            <!-- Outils de développement Spring Boot -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
@@ -118,8 +117,7 @@
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-hibernate6</artifactId>
         </dependency>
-        <!-- Lombok pour générer automatiquement les getter / setter...  -->
-        <!-- cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/ -->
+        <!-- Lombok pour générer automatiquement les getter / setter -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -131,16 +129,16 @@
             <version>3.2.6</version>
         </dependency>
         <dependency>
-            <!-- Pour ModelMapper...  -->
+            <!-- Pour ModelMapper -->
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>33.4.8-jre</version>
         </dependency>
 
-        <!-- Spring Mail pour l'envoi de mails -->
+        <!-- SendGrid pour l'envoi de mails -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
+            <groupId>com.sendgrid</groupId>
+            <artifactId>sendgrid-java</artifactId>
         </dependency>
 
     </dependencies>
@@ -173,9 +171,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <!-- Pour télécharger le javadoc des dépendances, exécuter dans un terminal :  -->
-                <!-- mvn dependency:resolve -Dclassifier=javadoc -->
-                <!-- Sur visual studio code, installer l'extension "Docs View" -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.7.1</version>
