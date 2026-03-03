@@ -1,13 +1,15 @@
 package pharmacie.config;
 
+import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
+
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
 import jakarta.validation.ConstraintViolationException;
-import java.util.stream.Collectors;
-import java.util.NoSuchElementException;
 
 /**
  * The GlobalExceptionHandler class handles exceptions thrown by the application and provides custom response bodies

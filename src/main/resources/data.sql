@@ -181,3 +181,24 @@ INSERT INTO LIGNE (COMMANDE_NUMERO, MEDICAMENT_REFERENCE, QUANTITE) VALUES
 (6, 6, 110), (6, 16, 65), (6, 26, 85), (6, 36, 60), (6, 91, 70),
 (7, 7, 80), (7, 17, 50), (7, 27, 95), (7, 37, 55), (7, 100, 45),
 (8, 8, 100), (8, 18, 75), (8, 28, 80), (8, 38, 70), (8, 48, 60);
+-- Insertion des fournisseurs
+INSERT INTO FOURNISSEUR (NOM, EMAIL) VALUES
+('PharmaCorp', 'pharmacorp+f1@gmail.com'),
+('MediSupply', 'medisupply+f2@gmail.com'),
+('BioPharm', 'biopharm+f3@gmail.com'),
+('SanteDistrib', 'santedistrib+f4@gmail.com'),
+('MedicoPlus', 'medicoplus+f5@gmail.com');
+ALTER TABLE Fournisseur ALTER COLUMN id RESTART WITH 6;
+
+-- Chaque catégorie est fournie par au moins 2 fournisseurs
+INSERT INTO FOURNISSEUR_CATEGORIE (FOURNISSEUR_ID, CATEGORIE_CODE) VALUES
+(1, 1), (2, 1),
+(1, 2), (3, 2),
+(2, 3), (4, 3),
+(3, 4), (5, 4),
+(1, 5), (4, 5),
+(2, 6), (3, 6),
+(4, 7), (5, 7),
+(1, 8), (2, 8),
+(3, 9), (5, 9),
+(4, 10), (1, 10);

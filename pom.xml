@@ -134,8 +134,15 @@
             <!-- Pour ModelMapper...  -->
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>33.4.8-jre</version> <!-- Use the latest version available -->
+            <version>33.4.8-jre</version>
         </dependency>
+
+        <!-- Spring Mail pour l'envoi de mails -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -171,7 +178,7 @@
                 <!-- Sur visual studio code, installer l'extension "Docs View" -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.7.1</version> <!-- Utilisez la dernière version disponible -->
+                <version>3.7.1</version>
                 <executions>
                     <execution>
                         <?m2e execute onConfiguration,onIncremental?>
